@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Use "/" during dev for simpler local URLs, keep
-// "/new-portfolio/" in production for GitHub Pages.
+// Use "/" for custom domain deployment
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
   return {
-    base: isProduction ? '/new-portfolio/' : '/',
+    base: '/',
     plugins: [react()],
     optimizeDeps: {
       exclude: ['lucide-react'],
