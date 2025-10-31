@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Home, User, Code, Briefcase, FolderOpen, Mail, Palette } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu, X, Home, User, Code, Briefcase, FolderOpen, Mail } from 'lucide-react';
 
 interface NavigationProps {
   activeSection: string;
@@ -54,13 +53,6 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                   </button>
                 );
               })}
-              <Link
-                to="/gallery"
-                className="px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center gap-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100"
-              >
-                <Palette size={16} />
-                Gallery
-              </Link>
             </div>
           </div>
 
@@ -97,13 +89,6 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                 </button>
               );
             })}
-            <Link
-              to="/gallery"
-              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all duration-200 flex items-center gap-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100"
-            >
-              <Palette size={16} />
-              Gallery
-            </Link>
           </div>
         </div>
       )}

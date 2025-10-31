@@ -7,7 +7,6 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Gallery from "./pages/Gallery";
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -61,7 +60,6 @@ function App() {
     <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </Router>
   );
