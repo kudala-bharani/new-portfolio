@@ -20,15 +20,39 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-    
-    // Show success message (you can implement a proper notification system)
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    try {
+      // Using Web3Forms API - free and easy
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '6d034f9c-6ee0-4e5e-a4ce-031a009e6c52',
+          subject: `Portfolio Contact from ${formData.name}`,
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          botcheck: false
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert('Thank you for your message! I\'ll get back to you soon.');
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
@@ -47,7 +71,7 @@ const Contact: React.FC = () => {
     {
       name: 'Email',
       icon: Mail,
-      url: 'mailto:bharani.kudala@nau.edu',
+      url: 'mailto:Bharanikudala@gmail.com',
       color: 'text-red-600 hover:text-red-700'
     }
   ];
@@ -80,7 +104,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">Email</p>
-                  <p className="text-slate-600">bharani.kudala@nau.edu</p>
+                  <p className="text-slate-600">Bharanikudala@gmail.com</p>
                 </div>
               </div>
 
