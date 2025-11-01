@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'comic-neue': ['Fleur De Leah', 'cursive'],
+      },
+    },
   },
   plugins: [],
 };

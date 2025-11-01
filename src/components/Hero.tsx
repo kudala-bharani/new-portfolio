@@ -86,7 +86,10 @@ const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Hi, I'm <span className="text-cyan-600">Bharani Kudala</span>
+              Hi, I'm{" "}
+              <span className="text-cyan-600 font-comic-neue font-bold text-4xl sm:text-5xl lg:text-6xl">
+                Bharani Kudala
+              </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-700 mb-6">
