@@ -117,21 +117,21 @@ const Hero: React.FC = () => {
               <a
                 href="/KUDALA_BHARANI_KUMAR_REDDY_RESUME.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-slate-800 hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 border-2 border-slate-900 bg-transparent text-slate-900 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-slate-900 hover:text-white"
               >
                 <Download size={18} />
                 Download Resume
               </a>
               <button
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center gap-2 bg-cyan-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-cyan-700 hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 border-2 border-cyan-600 bg-transparent text-slate-900 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-cyan-600 hover:text-white"
               >
                 <Mail size={18} />
                 Contact Me
               </button>
               <button
                 onClick={scrollToProjects}
-                className="inline-flex items-center justify-center gap-2 border-2 border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:border-slate-400 hover:bg-slate-50 hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 border-2 border-green-300 bg-transparent text-slate-900 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-green-400 hover:text-white"
               >
                 View My Work
                 <ArrowRight size={18} />
