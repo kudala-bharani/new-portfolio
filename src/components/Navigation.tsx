@@ -43,21 +43,21 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
         : 'md:pt-0'
     }`}>
       <nav
-        className={`bg-white/30 backdrop-blur-xl border-b border-white/20 shadow-sm md:transition-[border-radius,width,max-width,box-shadow,background-color] md:duration-1000 md:ease-in-out ${
+        className={`bg-white border-b border-slate-200 md:bg-white/30 md:backdrop-blur-xl md:border-white/20 md:shadow-sm md:transition-[border-radius,width,max-width,box-shadow,background-color] md:duration-1000 md:ease-in-out ${
           isScrolled
             ? 'md:rounded-full md:shadow-lg md:border md:border-white/30 md:w-auto md:max-w-[800px] md:bg-white/40'
             : 'w-full md:max-w-full md:rounded-none md:shadow-sm md:bg-white/30'
         }`}
       >
-        <div className={`md:transition-[padding,max-width,margin] md:duration-1000 md:ease-in-out ${
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:transition-[padding,max-width,margin] md:duration-1000 md:ease-in-out ${
           isScrolled 
             ? 'md:px-4 md:max-w-none md:mx-0' 
-            : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+            : ''
         }`}>
-          <div className={`flex md:transition-[height,justify-content,align-items] md:duration-1000 md:ease-in-out ${
+          <div className={`flex justify-between items-center h-16 md:transition-[height,justify-content,align-items] md:duration-1000 md:ease-in-out ${
             isScrolled 
               ? 'md:h-12 md:justify-center md:items-center' 
-              : 'h-16 md:h-16 justify-between items-center'
+              : ''
           }`}>
           {/* Name - Hidden when scrolled on desktop */}
           <div className={`flex-shrink-0 md:transition-[opacity,max-width,width] md:duration-1000 md:ease-in-out ${
@@ -119,7 +119,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/30 backdrop-blur-xl border-t border-white/20">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-slate-200">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
