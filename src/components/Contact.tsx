@@ -59,13 +59,13 @@ const Contact: React.FC = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/bharanikumar',
+      url: 'https://www.linkedin.com/in/bharanikudala/',
       color: 'text-blue-600 hover:text-blue-700'
     },
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/bharanikumar',
+      url: 'https://github.com/kudala-bharani',
       color: 'text-slate-800 hover:text-slate-900'
     },
     {
