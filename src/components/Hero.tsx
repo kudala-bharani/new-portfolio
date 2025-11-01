@@ -93,12 +93,23 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-700 mb-6">
-              Full-Stack Developer passionate about creating
-              <span className="text-cyan-600 font-semibold">
+              Full-Stack Developer passionate about solving{" "}
+              <span
+                className="text-cyan-600 
+              font-semibold"
+              >
                 {" "}
-                beautiful, responsive{" "}
+                real-world problems,{" "}
               </span>
-              and user-friendly web experiences
+               currently exploring AI and building practical{" "}
+              <span
+                className="text-cyan-600 
+              font-semibold"
+              >
+                {" "}
+                AI agents.{" "}
+              </span>
+            
             </p>
 
             <div className="flex items-center gap-4 text-slate-600 mb-8 text-sm">
