@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
                 {" "}
                 real-world problems,{" "}
               </span>
-               currently exploring AI and building practical{" "}
+              currently exploring AI and building practical{" "}
               <span
                 className="text-cyan-600 
               font-semibold"
@@ -109,7 +109,6 @@ const Hero: React.FC = () => {
                 {" "}
                 AI agents.{" "}
               </span>
-            
             </p>
 
             <div className="flex items-center gap-4 text-slate-600 mb-8 text-sm">
@@ -142,7 +141,7 @@ const Hero: React.FC = () => {
               </button>
               <button
                 onClick={scrollToProjects}
-                className="inline-flex items-center justify-center gap-2 border-2 border-green-300 bg-transparent text-slate-900 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-green-400 hover:text-white"
+                className="inline-flex items-center justify-center gap-2 border-2 border-green-600 bg-transparent text-slate-900 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-green-600 hover:border-green-600 hover:text-white"
               >
                 View My Work
                 <ArrowRight size={18} />

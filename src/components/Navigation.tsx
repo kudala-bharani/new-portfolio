@@ -21,10 +21,9 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
 
   const navItems = [
     { id: 'hero', label: 'Home', icon: Home },
-    { id: 'about', label: 'About', icon: User },
-    { id: 'skills', label: 'Skills', icon: Code },
     { id: 'experience', label: 'Experience', icon: Briefcase },
     { id: 'projects', label: 'Projects', icon: FolderOpen },
+    { id: 'skills', label: 'Skills', icon: Code },
     { id: 'contact', label: 'Contact', icon: Mail },
   ];
 
