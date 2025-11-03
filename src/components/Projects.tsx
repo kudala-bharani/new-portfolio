@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
         "Thymeleaf",
       ],
       githubUrl: "https://github.com/kudala-bharani/GPREC-QUIZ",
-      demoUrl: "#",
+      demoUrl: "https://youtu.be/pj4r6g-pa7M",
       icon: Zap,
       color: "green",
       highlights: [
