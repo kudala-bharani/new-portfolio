@@ -89,7 +89,7 @@ const Projects: React.FC = () => {
         "A comprehensive responsive website for an orphanage supporting orphan boys. Features modern design, donation system, and volunteer management.",
       technologies: ["HTML", "CSS", "Python", "Responsive Design"],
       githubUrl: "https://github.com/kudala-bharani/Vignana-Peetham",
-      demoUrl: "#",
+      demoUrl: "https://youtu.be/n394KhXO6XU",
       icon: Users,
       color: "orange",
       highlights: [
