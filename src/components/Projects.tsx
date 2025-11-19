@@ -2,9 +2,7 @@ import React from "react";
 import {
   ExternalLink,
   Github,
-  Globe,
   Users,
-  Cloud,
   FolderOpen,
   Zap,
   Play,
@@ -160,6 +158,8 @@ const Projects: React.FC = () => {
             <a
               key={btnIndex}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`flex items-center gap-2 bg-slate-700 text-white px-3 py-2 rounded-lg font-medium transition-all duration-200 ${getButtonColor(
                 project.color
               )} hover:scale-105 flex-1 justify-center text-sm`}
@@ -331,6 +331,8 @@ const Projects: React.FC = () => {
             </p>
             <a
               href="https://github.com/kudala-bharani"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-slate-800 hover:scale-105"
             >
               <Github size={20} />
