@@ -195,7 +195,8 @@ const Experience: React.FC = () => {
 
                     {/* Hover to see more text - visible only when not hovering */}
                     <div className="text-xs text-slate-500 text-center mb-2 group-hover:hidden transition-all duration-300">
-                      Hover to see key highlights
+                      <span className="md:hidden">Click to see key highlights</span>
+                      <span className="hidden md:inline">Hover to see key highlights</span>
                     </div>
 
                     {/* Expanded Details - Visible only on hover */}
