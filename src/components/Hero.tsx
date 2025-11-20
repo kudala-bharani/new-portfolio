@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
-                href="https://drive.google.com/uc?export=download&id=12KxLnJVJoun0jRj88KI4dHNpv8Ep_qBc"
+                href="https://drive.google.com/uc?export=download&id=1eaPfiuvFVlfZ1zD7ISJHkGdHGkdUB1VG"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
