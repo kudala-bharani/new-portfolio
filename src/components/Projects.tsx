@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
         "Tailwind CSS",
       ],
       githubUrl: "https://github.com/kudala-bharani/Finanace-Flow-Updated",
-      demoUrl: "https://youtu.be/XwP5doPNARk",
+      demoUrl: "https://youtu.be/MCY8sX_RmQY",
       liveUrl: "https://finance-flow-frontend-o34t.onrender.com/",
       icon: CreditCard,
       color: "blue",
@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
         "Thymeleaf",
       ],
       githubUrl: "https://github.com/kudala-bharani/GPREC-QUIZ",
-      demoUrl: "https://youtu.be/pj4r6g-pa7M",
+      demoUrl: "https://youtu.be/As4VW6zn5Ts",
       icon: Zap,
       color: "green",
       highlights: [
