@@ -5,70 +5,89 @@ import SpotlightCard from "./SpotlightCard";
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: "Teaching Assistant & Grader",
-      company: "Northern Arizona University",
-      period: "Jan 2025 – May 2025",
-      location: "Flagstaff, AZ",
+      title: "Web Developer",
+      company: "Quality of Life Inc.",
+      period: "Dec 2025 - Present",
+      location: "United States, Remote",
       description:
-        "Assisted in grading and tutoring for Data Structures and Web Technologies courses, helping students understand complex programming concepts.",
+        "Led the redesign and consolidation of multiple websites into a unified platform, improving navigation and user experience.",
       highlights: [
-        "Mentored 50+ students",
-        "Improved course satisfaction scores",
-        "Developed learning materials",
+        "Developed responsive and scalable UI components using React, JavaScript, HTML, and CSS",
+        "Structured and managed dynamic content using CMS tools to improve maintainability",
+        "Integrated forms and external services to streamline data collection and workflows",
+        "Collaborated with stakeholders to translate requirements into user-centric solutions",
+      ],
+      color: "orange",
+      logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGEAzZ3G7_Q_A/company-logo_100_100/company-logo_100_100/0/1698417224819?e=1777507200&v=beta&t=JiXYsfTkXlFo0F4BqNvWU9PnSN4b-PHwBP_X_mYEVT8",
+    },
+    {
+      title: "Teaching Assistant",
+      company: "Northern Arizona University",
+      period: "Jan 2025 - Dec 2025",
+      location: "United States, On-site",
+      description:
+        "Assisted in teaching core Computer Science courses including Data Structures and Web Technologies.",
+      highlights: [
+        "Guided students through programming concepts using Python and C",
+        "Conducted lab sessions, graded assignments, and provided one-on-one support",
+        "Helped students debug code and apply concepts to real-world scenarios",
       ],
       color: "blue",
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQHJP4PaFNhQLg/company-logo_100_100/company-logo_100_100/0/1630661606732?e=1763596800&v=beta&t=4gc5XjBB6l8cTzYs-F6ViDw95bsU9awD2mhLoa3T-A0",
+      logo: "https://media.licdn.com/dms/image/v2/C560BAQHJP4PaFNhQLg/company-logo_100_100/company-logo_100_100/0/1630661606732?e=1777507200&v=beta&t=uqqirco6t5VrGxzQdAfWH2BfE53h9cW1nhFAI5lIfKI",
     },
     {
-      title: "Web Developer Intern",
-      company: "Slash Mark",
-      period: "Jan 2024 – Apr 2024",
-      location: "Remote",
+      title: "Web Development Intern",
+      company: "Slash Mark IT Solutions (OPC) Pvt. Ltd",
+      period: "Jan 2024 - Aug 2024",
+      location: "India, Remote",
       description:
-        "Developed a comprehensive weather forecast website with real-time location detection and API integration.",
+        "Designed and developed responsive web applications using HTML, CSS, and JavaScript, improving UI consistency and usability.",
       highlights: [
-        "Built responsive web application",
-        "Integrated weather APIs",
-        "Implemented geolocation features",
+        "Built a weather forecasting application using REST APIs for real-time and multi-day data",
+        "Implemented browser-based geolocation for location-aware functionality",
+        "Optimized frontend performance with efficient DOM updates and rendering",
+        "Collaborated in an agile environment across multiple web projects",
       ],
       color: "green",
-      logo: "https://media.licdn.com/dms/image/v2/D560BAQHXfoVtKI3JNA/company-logo_100_100/company-logo_100_100/0/1733159467008/slash_mark_logo?e=1763596800&v=beta&t=Fo5q1j48V-7jRIQt7HFkyV4WO6AfeD986w_pZd0-MMA",
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQHXfoVtKI3JNA/company-logo_100_100/company-logo_100_100/0/1733159467008/slash_mark_logo?e=1777507200&v=beta&t=R5UtuC25SrRq5Q2RnMH9IjOu2rBCPvkFaoKbohTbsXI",
     },
     {
-      title: "Content Writer",
+      title: "Technical Content Writer",
       company: "GeeksforGeeks",
-      period: "Jan 2023 – Dec 2023",
-      location: "Remote",
+      period: "Jan 2023 - Dec 2023",
+      location: "India, Remote",
       description:
-        "Authored several technical articles on programming and computer science topics, reaching thousands of readers.",
+        "Authored multiple technical articles on programming concepts and problem-solving techniques.",
       highlights: [
-        "Published 15+ articles",
-        "Covered advanced CS topics",
-        "Engaged with developer community",
+        "Simplified complex topics in C, Java, and data structures for broad audiences",
+        "Improved clarity and readability of educational developer content",
+        "Strengthened core computer science foundations through technical writing",
       ],
       color: "purple",
-      logo: "https://media.licdn.com/dms/image/v2/D560BAQFEl-c-MprDFQ/company-logo_100_100/company-logo_100_100/0/1735198653833/geeksforgeeks_logo?e=1763596800&v=beta&t=kWe-NS8lTIegZ2sAagvpJblas76YzAQGteizevC7fBM",
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQFEl-c-MprDFQ/company-logo_100_100/company-logo_100_100/0/1735198653833/geeksforgeeks_logo?e=1777507200&v=beta&t=FGUoST1Ym5PA6WKmf4PQ2JUp4gLzuz1XwN95bDn8Ym4",
     },
     {
-      title: "Salesforce Developer Intern",
+      title: "Salesforce Developer",
       company: "Salesforce",
-      period: "Apr 2022 – Jun 2022",
-      location: "Remote",
+      period: "Apr 2022 - Sep 2022",
+      location: "India, Remote",
       description:
-        "Completed the comprehensive Developer Catalyst Program and earned two prestigious Superbadges.",
+        "Participated in Salesforce development projects, gaining hands-on experience in CRM-based applications.",
       highlights: [
-        "Earned 2 Superbadges",
-        "Mastered Salesforce platform",
-        "Built custom applications",
+        "Completed the Developer Catalyst Program and earned super badges",
+        "Customized workflows and implemented business logic within Salesforce",
+        "Gained exposure to enterprise-level development practices and tools",
       ],
       color: "cyan",
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQHZ9xYomLW7zg/company-logo_100_100/company-logo_100_100/0/1630658255326/salesforce_logo?e=1763596800&v=beta&t=WS6QkKcjHmfD3i66u2LzszNL1zWgjdTjTu_i-XJFUd4",
+      logo: "https://media.licdn.com/dms/image/v2/C560BAQHZ9xYomLW7zg/company-logo_100_100/company-logo_100_100/0/1630658255326/salesforce_logo?e=1777507200&v=beta&t=PBqpT0Jr-rld5K-CxdbR6vbKiIBAg0rsLnw__K0pDRI",
     },
   ];
 
   const getColorClasses = (color: string) => {
     const colorMap = {
       blue: "from-blue-50 to-blue-100 border-blue-200 hover:from-blue-100 hover:to-blue-200",
+      orange:
+        "from-orange-50 to-orange-100 border-orange-200 hover:from-orange-100 hover:to-orange-200",
       green:
         "from-green-50 to-green-100 border-green-200 hover:from-green-100 hover:to-green-200",
       purple:
@@ -81,6 +100,7 @@ const Experience: React.FC = () => {
   const getAccentColor = (color: string) => {
     const colorMap = {
       blue: "text-blue-600",
+      orange: "text-orange-600",
       green: "text-green-600",
       purple: "text-purple-600",
       cyan: "text-cyan-600",
@@ -91,6 +111,7 @@ const Experience: React.FC = () => {
   const getLogoColor = (color: string) => {
     const colorMap = {
       blue: "bg-blue-100 border-blue-300",
+      orange: "bg-orange-100 border-orange-300",
       green: "bg-green-100 border-green-300",
       purple: "bg-purple-100 border-purple-300",
       cyan: "bg-cyan-100 border-cyan-300",
