@@ -8,11 +8,36 @@ import {
   Play,
   CreditCard,
   Chrome,
+  Brain,
 } from "lucide-react";
 import SpotlightCard from "./SpotlightCard";
 
 const Projects: React.FC = () => {
   const mainProjects = [
+    {
+      title: "AI Second Brain",
+      description:
+        "A RAG-based second brain for your notes: tagged memories, semantic search with embeddings and pgvector, and Q&A grounded in what you saved. Built with Next.js, Supabase (Auth + RLS), HuggingFace, and OpenRouter.",
+      technologies: [
+        "Next.js",
+        "Supabase",
+        "OpenRouter",
+        "HuggingFace",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+      githubUrl: "https://github.com/kudala-bharani/ai-second-brain",
+      liveUrl: "https://ai-second-brain-beige.vercel.app/",
+      icon: Brain,
+      color: "cyan",
+      highlights: [
+        "Auth & RLS",
+        "Vector search",
+        "RAG Q&A",
+        "Cited sources",
+      ],
+      buttons: ["live", "code"],
+    },
     {
       title: "Finance Flow",
       description:
@@ -70,7 +95,7 @@ const Projects: React.FC = () => {
     {
       title: "Cover Letter Extension",
       description:
-        "A Chrome extension that generates tailored, downloadable PDF cover letters using Google Gemini API. Simply save your API key and profile, paste a job posting, and get an instant professional cover letter.",
+        "A Chrome extension that turns a job posting and your saved profile into a tailored cover letter using Gemini, exported as PDF. Quick setup with your own API key.",
       technologies: ["Chrome API", "JavaScript", "HTML", "CSS", "Gemini API"],
       githubUrl: "https://github.com/kudala-bharani/cover-letter-extension",
       demoUrl: "https://www.youtube.com/watch?v=aHkdsF7GmhE",
@@ -78,7 +103,7 @@ const Projects: React.FC = () => {
         "https://chromewebstore.google.com/detail/cover-letter-generator/biahiggabhkbbdnoabfjlbeljojgjohl",
       icon: Chrome,
       color: "purple",
-      highlights: ["AI Generation", "PDF Export", "Privacy-First"],
+      highlights: ["Gemini AI", "PDF Export", "Your API Key"],
       buttons: ["live", "demo", "code"],
     },
     {
@@ -248,70 +273,69 @@ const Projects: React.FC = () => {
               </div>
             );
           })}
+        </div>
 
-          {/* Third position with two smaller boxes */}
-          <div className="flex flex-col gap-4">
-            {smallProjects.map((project, index) => {
-              const Icon = project.icon;
-              return (
-                <div
-                  key={index}
-                  className={`bg-gradient-to-br ${getColorClasses(
-                    project.color
-                  )} p-4 rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group flex-1`}
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <div
-                      className={`p-2 rounded-lg ${getIconBgColor(
-                        project.color
-                      )} group-hover:scale-110 transition-transform duration-200`}
-                    >
-                      <Icon size={20} />
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900">
-                      {project.title}
-                    </h3>
+        <div className="grid md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
+          {smallProjects.map((project, index) => {
+            const Icon = project.icon;
+            return (
+              <div
+                key={index}
+                className={`bg-gradient-to-br ${getColorClasses(
+                  project.color
+                )} p-4 rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group flex-1`}
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <div
+                    className={`p-2 rounded-lg ${getIconBgColor(
+                      project.color
+                    )} group-hover:scale-110 transition-transform duration-200`}
+                  >
+                    <Icon size={20} />
                   </div>
-
-                  <p className="text-slate-700 mb-3 leading-relaxed text-sm">
-                    {project.description}
-                  </p>
-
-                  <div className="mb-3">
-                    <div className="flex flex-wrap gap-1">
-                      {project.highlights
-                        .slice(0, 2)
-                        .map((highlight, highlightIndex) => (
-                          <span
-                            key={highlightIndex}
-                            className="bg-white/70 backdrop-blur-sm px-2 py-0.5 rounded-md text-xs font-medium text-slate-700 border border-white/50"
-                          >
-                            {highlight}
-                          </span>
-                        ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-1">
-                      {project.technologies
-                        .slice(0, 3)
-                        .map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="bg-white/70 backdrop-blur-sm px-2 py-0.5 rounded-full text-xs font-medium text-slate-700 border border-white/50"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                    </div>
-                  </div>
-
-                  {renderButtons(project)}
+                  <h3 className="text-lg font-bold text-slate-900">
+                    {project.title}
+                  </h3>
                 </div>
-              );
-            })}
-          </div>
+
+                <p className="text-slate-700 mb-3 leading-relaxed text-sm">
+                  {project.description}
+                </p>
+
+                <div className="mb-3">
+                  <div className="flex flex-wrap gap-1">
+                    {project.highlights
+                      .slice(0, 2)
+                      .map((highlight, highlightIndex) => (
+                        <span
+                          key={highlightIndex}
+                          className="bg-white/70 backdrop-blur-sm px-2 py-0.5 rounded-md text-xs font-medium text-slate-700 border border-white/50"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-1">
+                    {project.technologies
+                      .slice(0, 3)
+                      .map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="bg-white/70 backdrop-blur-sm px-2 py-0.5 rounded-full text-xs font-medium text-slate-700 border border-white/50"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                  </div>
+                </div>
+
+                {renderButtons(project)}
+              </div>
+            );
+          })}
         </div>
 
         <div className="mt-16 text-center">
