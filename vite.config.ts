@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Use "/" for custom domain deployment
+// GitHub Pages project site: "/new-portfolio/". Use base: "/" for a root custom domain.
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
   return {
-    base: '/',
+    base: isProduction ? '/new-portfolio/' : '/',
     plugins: [react()],
     optimizeDeps: {
       exclude: ['lucide-react'],

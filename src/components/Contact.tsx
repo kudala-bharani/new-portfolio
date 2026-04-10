@@ -1,55 +1,69 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  MessageCircle,
+} from "lucide-react";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Using Web3Forms API - free and easy
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: '6d034f9c-6ee0-4e5e-a4ce-031a009e6c52',
+          access_key: "6d034f9c-6ee0-4e5e-a4ce-031a009e6c52",
           subject: `Portfolio Contact from ${formData.name}`,
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          botcheck: false
-        })
+          botcheck: false,
+        }),
       });
 
       const result = await response.json();
 
       if (result.success) {
-        alert('Thank you for your message! I\'ll get back to you soon.');
+        alert("Thank you for your message! I'll get back to you soon.");
         // Reset form
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        alert('Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com');
+        alert(
+          "Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com",
+        );
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com');
+      console.error("Error submitting form:", error);
+      alert(
+        "Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -57,32 +71,38 @@ const Contact: React.FC = () => {
 
   const socialLinks = [
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: Linkedin,
-      url: 'https://www.linkedin.com/in/bharanikudala/',
-      color: 'text-blue-600 hover:text-blue-700'
+      url: "https://www.linkedin.com/in/bharanikudala/",
+      color: "text-blue-600 hover:text-blue-700",
     },
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: Github,
-      url: 'https://github.com/kudala-bharani',
-      color: 'text-slate-800 hover:text-slate-900'
+      url: "https://github.com/kudala-bharani",
+      color: "text-slate-800 hover:text-slate-900",
     },
     {
-      name: 'Email',
+      name: "Email",
       icon: Mail,
-      url: 'mailto:Bharanikudala@gmail.com',
-      color: 'text-red-600 hover:text-red-700'
-    }
+      url: "mailto:Bharanikudala@gmail.com",
+      color: "text-red-600 hover:text-red-700",
+    },
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section
+      id="contact"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50"
+    >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            Get In Touch
+          </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            I'm always excited to discuss new opportunities, collaborate on projects, or just have a conversation about technology
+            I'm always excited to discuss new opportunities, collaborate on
+            projects, or just have a conversation about technology
           </p>
         </div>
 
@@ -90,10 +110,13 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                Let's Connect
+              </h3>
               <p className="text-slate-700 mb-8 leading-relaxed">
-                Whether you have a project in mind, want to discuss opportunities, or just want to say hello, 
-                I'd love to hear from you. Feel free to reach out through any of the channels below.
+                Whether you have a project in mind, want to discuss
+                opportunities, or just want to say hello, I'd love to hear from
+                you. Feel free to reach out through any of the channels below.
               </p>
             </div>
 
@@ -114,7 +137,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">Location</p>
-                  <p className="text-slate-600">Flagstaff, Arizona, USA</p>
+                  <p className="text-slate-600">Tennessee, USA</p>
                 </div>
               </div>
 
@@ -152,10 +175,15 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-xl border border-slate-200">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">
+              Send a Message
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-slate-700 mb-2"
+                >
                   Your Name
                 </label>
                 <input
@@ -171,7 +199,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-slate-700 mb-2"
+                >
                   Your Email
                 </label>
                 <input
@@ -187,7 +218,10 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-slate-700 mb-2"
+                >
                   Your Message
                 </label>
                 <textarea

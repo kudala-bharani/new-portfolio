@@ -17,7 +17,7 @@ const Experience: React.FC = () => {
         "Integrated forms and external services to streamline data collection and workflows",
         "Collaborated with stakeholders to translate requirements into user-centric solutions",
       ],
-      color: "orange",
+      color: "purple",
       logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGEAzZ3G7_Q_A/company-logo_100_100/company-logo_100_100/0/1698417224819?e=1777507200&v=beta&t=JiXYsfTkXlFo0F4BqNvWU9PnSN4b-PHwBP_X_mYEVT8",
     },
     {
@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
         "Conducted lab sessions, graded assignments, and provided one-on-one support",
         "Helped students debug code and apply concepts to real-world scenarios",
       ],
-      color: "blue",
+      color: "yellow",
       logo: "https://media.licdn.com/dms/image/v2/C560BAQHJP4PaFNhQLg/company-logo_100_100/company-logo_100_100/0/1630661606732?e=1777507200&v=beta&t=uqqirco6t5VrGxzQdAfWH2BfE53h9cW1nhFAI5lIfKI",
     },
     {
@@ -48,7 +48,7 @@ const Experience: React.FC = () => {
         "Optimized frontend performance with efficient DOM updates and rendering",
         "Collaborated in an agile environment across multiple web projects",
       ],
-      color: "green",
+      color: "blue",
       logo: "https://media.licdn.com/dms/image/v2/D560BAQHXfoVtKI3JNA/company-logo_100_100/company-logo_100_100/0/1733159467008/slash_mark_logo?e=1777507200&v=beta&t=R5UtuC25SrRq5Q2RnMH9IjOu2rBCPvkFaoKbohTbsXI",
     },
     {
@@ -63,7 +63,7 @@ const Experience: React.FC = () => {
         "Improved clarity and readability of educational developer content",
         "Strengthened core computer science foundations through technical writing",
       ],
-      color: "purple",
+      color: "green",
       logo: "https://media.licdn.com/dms/image/v2/D560BAQFEl-c-MprDFQ/company-logo_100_100/company-logo_100_100/0/1735198653833/geeksforgeeks_logo?e=1777507200&v=beta&t=FGUoST1Ym5PA6WKmf4PQ2JUp4gLzuz1XwN95bDn8Ym4",
     },
     {
@@ -92,6 +92,8 @@ const Experience: React.FC = () => {
         "from-green-50 to-green-100 border-green-200 hover:from-green-100 hover:to-green-200",
       purple:
         "from-purple-50 to-purple-100 border-purple-200 hover:from-purple-100 hover:to-purple-200",
+      yellow:
+        "from-yellow-50 to-yellow-100 border-yellow-200 hover:from-yellow-100 hover:to-yellow-200",
       cyan: "from-cyan-50 to-cyan-100 border-cyan-200 hover:from-cyan-100 hover:to-cyan-200",
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
@@ -103,6 +105,7 @@ const Experience: React.FC = () => {
       orange: "text-orange-600",
       green: "text-green-600",
       purple: "text-purple-600",
+      yellow: "text-yellow-700",
       cyan: "text-cyan-600",
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
@@ -114,6 +117,7 @@ const Experience: React.FC = () => {
       orange: "bg-orange-100 border-orange-300",
       green: "bg-green-100 border-green-300",
       purple: "bg-purple-100 border-purple-300",
+      yellow: "bg-yellow-100 border-yellow-300",
       cyan: "bg-cyan-100 border-cyan-300",
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
