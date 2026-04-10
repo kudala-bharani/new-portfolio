@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
               <div className="hidden sm:block w-1 h-1 bg-slate-400 rounded-full"></div>
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>Arizona, USA</span>
+                <span>Tennessee, USA</span>
               </div>
             </div>
 
