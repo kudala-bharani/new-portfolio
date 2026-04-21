@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
     {
       title: "Web Developer",
       company: "Quality of Life Inc.",
-      period: "Dec 2025 - Present",
+      period: "Apr 2026 - Present",
       location: "United States, Remote",
       description:
         "Led the redesign and consolidation of multiple websites into a unified platform, improving navigation and user experience.",
