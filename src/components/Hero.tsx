@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
               >
                 1+ years of experience
               </span>{" "}
-              and a Master's in Computer Science (3.9 GPA), focused on building{" "}
+              and a Master's in Computer Science, focused on building{" "}
               <span
                 className="text-cyan-600
               font-semibold"
@@ -130,10 +130,8 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
-                href="https://drive.google.com/uc?export=download&id=1Y0Eba9OuU1g29-ewWocoUqfa6jZsMbbJ"
+                href="/Bharani_Kudala_Resume.pdf"
                 download
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border-2 border-slate-900 bg-transparent text-slate-900 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-slate-900 hover:text-white"
               >
                 <Download size={18} />
