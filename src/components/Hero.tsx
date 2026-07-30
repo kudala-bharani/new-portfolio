@@ -85,27 +85,29 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-sm sm:text-base font-semibold uppercase tracking-[0.2em] text-cyan-600 mb-4">
-              Hi, I'm Bharani Kudala
-            </p>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
-              I turn complex ideas into{" "}
-              <span className="text-cyan-600">
-                useful, intelligent products.
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+              Hi, I'm{" "}
+              <span className="text-cyan-600 font-comic-neue font-bold text-4xl sm:text-5xl lg:text-6xl">
+                Bharani Kudala
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-700 mb-6 leading-relaxed max-w-2xl">
-              I'm a software engineer building reliable full-stack applications,
-              scalable APIs, and AI-powered systems—from polished user experiences
-              to RAG-driven knowledge tools.
+              I build{" "}
+              <span className="text-cyan-600 font-semibold">
+                scalable full-stack applications
+              </span>
+              , reliable APIs, and{" "}
+              <span className="text-cyan-600 font-semibold">
+                AI-powered systems
+              </span>{" "}
+              that turn complex problems into useful products.
             </p>
 
             <div className="flex items-center gap-4 text-slate-600 mb-8 text-sm">
               <div className="flex items-center gap-2">
                 <GraduationCap size={18} />
-                <span>M.S. in Computer Science · NAU</span>
+                <span>Master's Student at NAU</span>
               </div>
               <div className="hidden sm:block w-1 h-1 bg-slate-400 rounded-full"></div>
               <div className="flex items-center gap-2">

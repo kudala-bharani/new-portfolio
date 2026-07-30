@@ -106,6 +106,27 @@ const Projects: React.FC = () => {
 
   const smallProjects: Project[] = [
     {
+      title: "GPREC Quiz Application",
+      description:
+        "A secure online assessment platform with timed quizzes, automatic scoring, and safeguards designed to reduce common forms of cheating.",
+      technologies: [
+        "Spring Boot",
+        "Spring JPA",
+        "H2 Database",
+        "Thymeleaf",
+      ],
+      githubUrl: "https://github.com/kudala-bharani/GPREC-QUIZ",
+      demoUrl: "https://youtu.be/As4VW6zn5Ts",
+      icon: Zap,
+      color: "green",
+      highlights: [
+        "Anti-Cheating Security",
+        "Automatic Scoring",
+        "Timed Assessments",
+      ],
+      buttons: ["code", "demo"],
+    },
+    {
       title: "Cover Letter Extension",
       description:
         "A Chrome extension that turns a job posting and your saved profile into a tailored cover letter using Gemini, exported as PDF. Quick setup with your own API key.",
@@ -132,27 +153,6 @@ const Projects: React.FC = () => {
         "Responsive Design",
         "Donation Integration",
         "Content Management",
-      ],
-      buttons: ["code", "demo"],
-    },
-    {
-      title: "GPREC Quiz Application",
-      description:
-        "A secure online assessment platform with timed quizzes, automatic scoring, and safeguards designed to reduce common forms of cheating.",
-      technologies: [
-        "Spring Boot",
-        "Spring JPA",
-        "H2 Database",
-        "Thymeleaf",
-      ],
-      githubUrl: "https://github.com/kudala-bharani/GPREC-QUIZ",
-      demoUrl: "https://youtu.be/As4VW6zn5Ts",
-      icon: Zap,
-      color: "green",
-      highlights: [
-        "Anti-Cheating Security",
-        "Automatic Scoring",
-        "Timed Assessments",
       ],
       buttons: ["code", "demo"],
     },
