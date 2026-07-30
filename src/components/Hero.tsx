@@ -85,41 +85,27 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Hi, I'm{" "}
-              <span className="text-cyan-600 font-comic-neue font-bold text-4xl sm:text-5xl lg:text-6xl">
-                Bharani Kudala
+            <p className="text-sm sm:text-base font-semibold uppercase tracking-[0.2em] text-cyan-600 mb-4">
+              Hi, I'm Bharani Kudala
+            </p>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+              I turn complex ideas into{" "}
+              <span className="text-cyan-600">
+                useful, intelligent products.
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-700 mb-6">
-              Software Engineer with{" "}
-              <span
-                className="text-cyan-600
-              font-semibold"
-              >
-                1+ years of experience
-              </span>{" "}
-              and a Master's in Computer Science, focused on building{" "}
-              <span
-                className="text-cyan-600
-              font-semibold"
-              >
-                scalable full-stack applications
-              </span>{" "}
-              and{" "}
-              <span
-                className="text-cyan-600
-              font-semibold"
-              >
-                AI-powered systems.
-              </span>
+            <p className="text-lg sm:text-xl text-slate-700 mb-6 leading-relaxed max-w-2xl">
+              I'm a software engineer building reliable full-stack applications,
+              scalable APIs, and AI-powered systems—from polished user experiences
+              to RAG-driven knowledge tools.
             </p>
 
             <div className="flex items-center gap-4 text-slate-600 mb-8 text-sm">
               <div className="flex items-center gap-2">
                 <GraduationCap size={18} />
-                <span>Master's Student at NAU</span>
+                <span>M.S. in Computer Science · NAU</span>
               </div>
               <div className="hidden sm:block w-1 h-1 bg-slate-400 rounded-full"></div>
               <div className="flex items-center gap-2">

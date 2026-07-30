@@ -9,11 +9,27 @@ import {
   CreditCard,
   Chrome,
   Brain,
+  Gamepad2,
 } from "lucide-react";
 import SpotlightCard from "./SpotlightCard";
 
+type ProjectButton = "code" | "demo" | "live";
+
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  githubUrl: string;
+  demoUrl?: string;
+  liveUrl?: string;
+  icon: React.ComponentType<{ size?: number }>;
+  color: string;
+  highlights: string[];
+  buttons: ProjectButton[];
+}
+
 const Projects: React.FC = () => {
-  const mainProjects = [
+  const mainProjects: Project[] = [
     {
       title: "AI Second Brain",
       description:
@@ -65,33 +81,30 @@ const Projects: React.FC = () => {
       buttons: ["live", "demo", "code"],
     },
     {
-      title: "GPREC Quiz Application",
+      title: "Word Hive Live",
       description:
-        "A customized online quiz app with strong anti-cheating security, time-limited assessments, and automatic scoring. Features tab-switching prevention, copy/paste disable, and calculates best three scores out of five quizzes.",
+        "A multiplayer word puzzle game built for teams and online meetings. Players join shareable rooms, race to form words from a seven-letter hive, and compete through timed rounds and live leaderboards.",
       technologies: [
-        "Spring Boot",
-        "Spring JPA",
-        "H2 Database",
-        "HTML",
-        "CSS",
+        "Next.js",
+        "React",
         "JavaScript",
-        "Thymeleaf",
+        "Tailwind CSS",
       ],
-      githubUrl: "https://github.com/kudala-bharani/GPREC-QUIZ",
-      demoUrl: "https://youtu.be/As4VW6zn5Ts",
-      icon: Zap,
-      color: "green",
+      githubUrl: "https://github.com/kudala-bharani/word-hive-live",
+      liveUrl: "https://word-hive-live.vercel.app/",
+      icon: Gamepad2,
+      color: "orange",
       highlights: [
-        "Anti-Cheating Security",
-        "Automatic Scoring",
-        "Time Limits",
-        "Section Notice Boards",
+        "Up to 10 Players",
+        "Shareable Rooms",
+        "Timed Rounds",
+        "Pangram Scoring",
       ],
-      buttons: ["code", "demo"],
+      buttons: ["live", "code"],
     },
   ];
 
-  const smallProjects = [
+  const smallProjects: Project[] = [
     {
       title: "Cover Letter Extension",
       description:
@@ -119,6 +132,27 @@ const Projects: React.FC = () => {
         "Responsive Design",
         "Donation Integration",
         "Content Management",
+      ],
+      buttons: ["code", "demo"],
+    },
+    {
+      title: "GPREC Quiz Application",
+      description:
+        "A secure online assessment platform with timed quizzes, automatic scoring, and safeguards designed to reduce common forms of cheating.",
+      technologies: [
+        "Spring Boot",
+        "Spring JPA",
+        "H2 Database",
+        "Thymeleaf",
+      ],
+      githubUrl: "https://github.com/kudala-bharani/GPREC-QUIZ",
+      demoUrl: "https://youtu.be/As4VW6zn5Ts",
+      icon: Zap,
+      color: "green",
+      highlights: [
+        "Anti-Cheating Security",
+        "Automatic Scoring",
+        "Timed Assessments",
       ],
       buttons: ["code", "demo"],
     },
@@ -157,10 +191,10 @@ const Projects: React.FC = () => {
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
 
-  const renderButtons = (project: any) => {
+  const renderButtons = (project: Project) => {
     return (
       <div className="flex gap-2 flex-wrap">
-        {project.buttons.map((buttonType: string, btnIndex: number) => {
+        {project.buttons.map((buttonType, btnIndex) => {
           let href = "#";
           let icon = <Github size={16} />;
           let label = "Code";
@@ -218,7 +252,7 @@ const Projects: React.FC = () => {
                 key={index}
                 className={`bg-gradient-to-br ${getColorClasses(
                   project.color
-                )} p-6 rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group`}
+                )} p-6 rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group flex flex-col h-full`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div
@@ -269,13 +303,13 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                {renderButtons(project)}
+                <div className="mt-auto">{renderButtons(project)}</div>
               </div>
             );
           })}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
           {smallProjects.map((project, index) => {
             const Icon = project.icon;
             return (
@@ -283,7 +317,7 @@ const Projects: React.FC = () => {
                 key={index}
                 className={`bg-gradient-to-br ${getColorClasses(
                   project.color
-                )} p-4 rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group flex-1`}
+                )} p-4 rounded-xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group flex flex-col h-full`}
               >
                 <div className="flex items-center gap-2 mb-3">
                   <div
@@ -332,7 +366,7 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                {renderButtons(project)}
+                <div className="mt-auto">{renderButtons(project)}</div>
               </div>
             );
           })}
