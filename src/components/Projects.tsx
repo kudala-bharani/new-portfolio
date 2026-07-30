@@ -31,30 +31,6 @@ interface Project {
 const Projects: React.FC = () => {
   const mainProjects: Project[] = [
     {
-      title: "AI Second Brain",
-      description:
-        "A RAG-based second brain for your notes: tagged memories, semantic search with embeddings and pgvector, and Q&A grounded in what you saved. Built with Next.js, Supabase (Auth + RLS), HuggingFace, and OpenRouter.",
-      technologies: [
-        "Next.js",
-        "Supabase",
-        "OpenRouter",
-        "HuggingFace",
-        "TypeScript",
-        "Tailwind CSS",
-      ],
-      githubUrl: "https://github.com/kudala-bharani/ai-second-brain",
-      liveUrl: "https://ai-second-brain-beige.vercel.app/",
-      icon: Brain,
-      color: "cyan",
-      highlights: [
-        "Auth & RLS",
-        "Vector search",
-        "RAG Q&A",
-        "Cited sources",
-      ],
-      buttons: ["live", "code"],
-    },
-    {
       title: "Finance Flow",
       description:
         "A modern, full-stack personal finance management application. Track income, expenses, budget goals, and savings with an intuitive interface featuring real-time analytics, multi-account support, and smart currency conversion.",
@@ -79,6 +55,30 @@ const Projects: React.FC = () => {
         "Currency Conversion",
       ],
       buttons: ["live", "demo", "code"],
+    },
+    {
+      title: "AI Second Brain",
+      description:
+        "A RAG-based second brain for your notes: tagged memories, semantic search with embeddings and pgvector, and Q&A grounded in what you saved. Built with Next.js, Supabase (Auth + RLS), HuggingFace, and OpenRouter.",
+      technologies: [
+        "Next.js",
+        "Supabase",
+        "OpenRouter",
+        "HuggingFace",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+      githubUrl: "https://github.com/kudala-bharani/ai-second-brain",
+      liveUrl: "https://ai-second-brain-beige.vercel.app/",
+      icon: Brain,
+      color: "cyan",
+      highlights: [
+        "Auth & RLS",
+        "Vector search",
+        "RAG Q&A",
+        "Cited sources",
+      ],
+      buttons: ["live", "code"],
     },
     {
       title: "Word Hive Live",
