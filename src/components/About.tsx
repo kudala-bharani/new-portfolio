@@ -23,15 +23,16 @@ const About = () => {
                 <div className="p-2 bg-blue-100 rounded-lg">
                   <GraduationCap className="text-blue-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900">Current Education</h3>
+                <h3 className="text-xl font-semibold text-slate-900">Education</h3>
               </div>
               <p className="text-slate-700 mb-2">
-                <strong>Master's in Computer Science</strong><br />
-                Northern Arizona University
+                <strong>Master of Science in Computer Science</strong><br />
+                Northern Arizona University<br />
+                <span className="text-sm text-slate-600">Completed December 2025</span>
               </p>
               <div className="flex items-center gap-2">
                 <Award className="text-yellow-500" size={16} />
-                <span className="text-sm font-medium text-slate-600">GPA: 4.0/4.0</span>
+                <span className="text-sm font-medium text-slate-600">Cumulative GPA: 3.91/4.00</span>
               </div>
             </SpotlightCard>
 

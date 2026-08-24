@@ -107,12 +107,12 @@ const Hero: React.FC = () => {
             <div className="flex items-center gap-4 text-slate-600 mb-8 text-sm">
               <div className="flex items-center gap-2">
                 <GraduationCap size={18} />
-                <span>Master's Student at NAU</span>
+                <span>M.S. in Computer Science, NAU · Dec 2025</span>
               </div>
               <div className="hidden sm:block w-1 h-1 bg-slate-400 rounded-full"></div>
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>Tennessee, USA</span>
+                <span>Hixson, TN</span>
               </div>
             </div>
 

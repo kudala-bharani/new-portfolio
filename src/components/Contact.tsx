@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Mail,
-  Phone,
   MapPin,
   Send,
   Github,
@@ -56,13 +55,13 @@ const Contact: React.FC = () => {
         setFormData({ name: "", email: "", message: "" });
       } else {
         alert(
-          "Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com",
+          "Something went wrong. Please try again or email me directly at bunnykudala@gmail.com",
         );
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert(
-        "Something went wrong. Please try again or email me directly at Bharanikudala@gmail.com",
+        "Something went wrong. Please try again or email me directly at bunnykudala@gmail.com",
       );
     } finally {
       setIsSubmitting(false);
@@ -85,7 +84,7 @@ const Contact: React.FC = () => {
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:Bharanikudala@gmail.com",
+      url: "mailto:bunnykudala@gmail.com",
       color: "text-red-600 hover:text-red-700",
     },
   ];
@@ -127,7 +126,12 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">Email</p>
-                  <p className="text-slate-600">Bharanikudala@gmail.com</p>
+                  <a
+                    href="mailto:bunnykudala@gmail.com"
+                    className="text-slate-600 hover:text-blue-700"
+                  >
+                    bunnykudala@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -137,7 +141,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">Location</p>
-                  <p className="text-slate-600">Tennessee, USA</p>
+                  <p className="text-slate-600">Hixson, TN</p>
                 </div>
               </div>
 
@@ -155,12 +159,13 @@ const Contact: React.FC = () => {
             <div>
               <h4 className="font-semibold text-slate-900 mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                {socialLinks.map((link, index) => {
+                {socialLinks.map((link) => {
                   const Icon = link.icon;
                   return (
                     <a
-                      key={index}
+                      key={link.name}
                       href={link.url}
+                      aria-label={link.name}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`p-3 bg-slate-100 rounded-lg transition-all duration-200 hover:scale-105 hover:bg-slate-200 ${link.color}`}
