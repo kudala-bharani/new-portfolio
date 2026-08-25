@@ -87,12 +87,7 @@ new-portfolio/
 
 ### Vite base path (GitHub Pages)
 
-`vite.config.ts` sets:
-
-- **Dev**: base `/` (simple local URLs)
-- **Production**: base `/new-portfolio/` (required for GitHub Pages under a project path)
-
-This ensures local dev URLs are `http://localhost:5173/`, while the production build assumes it will be hosted at `https://<username>.github.io/new-portfolio/`.
+`vite.config.ts` uses base `/` for both development and production because the portfolio is served from its custom domain.
 
 ### Tailwind
 
@@ -105,8 +100,8 @@ Configured via `tailwind.config.js` and `postcss.config.js`. Styles are imported
 
 ## Content and assets
 
-- The resume link in `src/components/Hero.tsx` points to `/KUDALA_BHARANI_KUMAR_REDDY_RESUME.pdf`.
-  - Place your PDF in a `public/` folder at the project root so it’s available in production: `public/KUDALA_BHARANI_KUMAR_REDDY_RESUME.pdf`.
+- The resume link in `src/components/Hero.tsx` points to `/Bharani_Kudala_Resume.pdf`.
+  - Keep the final PDF at `public/Bharani_Kudala_Resume.pdf` so it is available at the site root.
   - Vite will serve files in `public/` at the site root.
 
 ## Linting
@@ -119,7 +114,7 @@ npm run lint
 
 Option A — GitHub Actions (recommended):
 
-1. Ensure `vite.config.ts` production base is `/new-portfolio/` (already configured).
+1. Keep `vite.config.ts` production base at `/` for the custom domain.
 2. Create a workflow that builds the site and deploys `dist/` to Pages. Example minimal workflow steps:
    - Checkout → Setup Node → Install (`npm ci`) → Build (`npm run build`) → Upload artifact → Deploy to Pages.
 

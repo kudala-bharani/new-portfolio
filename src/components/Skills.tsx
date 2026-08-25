@@ -7,6 +7,36 @@ type SpotlightCardProps = {
   spotlightColor?: string;
 };
 
+const spotlightStyles = `
+  .card-spotlight {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-spotlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .card-spotlight:hover::before {
+    opacity: 1;
+  }
+
+  .card-spotlight > * {
+    position: relative;
+    z-index: 2;
+  }
+`;
+
 const SpotlightCard: React.FC<SpotlightCardProps> = ({
   children,
   className = "",
@@ -25,39 +55,9 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
     divRef.current.style.setProperty("--spotlight-color", spotlightColor);
   };
 
-  const beforeStyles = `
-    .card-spotlight {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-spotlight::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .card-spotlight:hover::before {
-      opacity: 1;
-    }
-
-    .card-spotlight > * {
-      position: relative;
-      z-index: 2;
-    }
-  `;
-
   React.useEffect(() => {
     const styleSheet = document.createElement("style");
-    styleSheet.innerText = beforeStyles;
+    styleSheet.innerText = spotlightStyles;
     document.head.appendChild(styleSheet);
     return () => document.head.removeChild(styleSheet);
   }, []);

@@ -5,18 +5,16 @@ import SpotlightCard from "./SpotlightCard";
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: "Software Engineer",
+      title: "Volunteer Software Engineer (Full-Time)",
       company: "Quality of Life (Non-Profit)",
       period: "Apr 2026 - Present",
       location: "United States, Remote",
       description:
-        "Led the redesign and development of a unified organizational website using Wix Studio, consolidating multiple legacy sites into a single platform.",
+        "Rebuilding a unified nonprofit website in Wix Studio, consolidating multiple legacy sites into one CMS-driven platform.",
       highlights: [
-        "Improved site structure and navigation, reducing content redundancy and improving user experience across multiple program areas",
-        "Built dynamic, CMS-driven pages and modular components to enable scalable content management and easier updates",
-        "Designed and integrated form-based workflows using Wix Forms, 123FormBuilder, and Zapier to automate data collection and internal processes",
-        "Collaborated with cross-functional stakeholders to gather requirements, iterate on UI/UX improvements, and deliver features in an Agile environment",
-        "Optimized website performance, improving load times and overall user experience while enhancing maintainability through structured design and continuous enhancements",
+        "Developed reusable CMS-backed pages, navigation, and responsive components to simplify content updates across program areas",
+        "Automated intake and internal workflows with Wix Forms, 123FormBuilder, and Zapier; translated stakeholder requirements into iterative releases",
+        "Partnered with program stakeholders to gather requirements, revise information architecture, and deliver responsive UI improvements across multiple program areas",
       ],
       color: "purple",
       logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGEAzZ3G7_Q_A/company-logo_100_100/company-logo_100_100/0/1698417224819?e=1777507200&v=beta&t=JiXYsfTkXlFo0F4BqNvWU9PnSN4b-PHwBP_X_mYEVT8",
@@ -42,12 +40,10 @@ const Experience: React.FC = () => {
       period: "Sep 2023 - Aug 2024",
       location: "India, Remote",
       description:
-        "Designed and developed RESTful APIs for scalable data processing, validation, and business logic implementation in production systems.",
+        "Contributed to full-stack web development for an early-stage startup, implementing frontend and backend features.",
       highlights: [
-        "Designed and developed RESTful APIs for scalable data processing, validation, and business logic implementation in production systems",
-        "Improved database performance by optimizing complex SQL queries, indexing strategies, and query execution for high-throughput endpoints",
-        "Implemented end-to-end full-stack features by integrating frontend interfaces with backend services, ensuring efficient data flow and API communication",
-        "Investigated and resolved production bugs, edge cases, and data inconsistencies, improving system stability, reliability, and data integrity",
+        "Contributed to full-stack web development for an early-stage startup, implementing frontend and backend features",
+        "Investigated application bugs and data-flow issues, then tested fixes across affected user workflows",
       ],
       color: "blue",
       logo: "https://media.licdn.com/dms/image/v2/D560BAQHXfoVtKI3JNA/company-logo_100_100/company-logo_100_100/0/1733159467008/slash_mark_logo?e=1777507200&v=beta&t=R5UtuC25SrRq5Q2RnMH9IjOu2rBCPvkFaoKbohTbsXI",
